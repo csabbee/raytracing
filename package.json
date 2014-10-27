@@ -1,0 +1,27 @@
+{
+  "name": "raytrace",
+  "version": "0.0.1",
+  "description": "This is a raytracing web app",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:csabbee/raytracing.git"
+  },
+  "keywords": [
+    "raytrace",
+    "js"
+  ],
+  "author": "Csaba Valyi",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/csabbee/raytracing/issues"
+  },
+  "devDependencies": {
+    "gulp": "~3.8.9",
+    "gulp-typescript": "~2.1.0",
+    "event-stream": "~3.1.7"
+  }
+}
