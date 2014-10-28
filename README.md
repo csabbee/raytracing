@@ -1,3 +1,3 @@
 ### Run karma tests
 
-        karma start
+    karma start
