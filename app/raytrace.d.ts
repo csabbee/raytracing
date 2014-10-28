@@ -50,9 +50,9 @@ declare module rt{
     }
 
     export interface IColor {
-        r: number;
-        g: number;
-        b; number;
+        red: number;
+        green: number;
+        blue: number;
 
         multiplyColor(c: IColor): IColor;
         substractColor(c: IColor): IColor;
