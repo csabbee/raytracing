@@ -9,7 +9,7 @@ declare module rt{
         normalize(): void;
         length(): number;
 
-        multiplyVector(vector: IVector): IVector;
+        vectorialMultiply(vector: IVector): IVector;
         addVector(vector: IVector): IVector;
         substractVector(vector: IVector): IVector;
         divideVector(vector: IVector): IVector;
