@@ -14,8 +14,6 @@ declare module rt{
         substractVector(vector: IVector): IVector;
 
         multiplyVectorByNumber(f: number): IVector;
-        addVectorByNumber(f: number): IVector;
-        substractVectorByNumber(f: number): IVector;
         divideVectorByNumber(f: number): IVector;
     }
 
