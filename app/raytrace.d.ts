@@ -12,7 +12,6 @@ declare module rt{
         vectorialMultiply(vector: IVector): IVector;
         addVector(vector: IVector): IVector;
         substractVector(vector: IVector): IVector;
-        divideVector(vector: IVector): IVector;
 
         multiplyVectorByNumber(f: number): IVector;
         addVectorByNumber(f: number): IVector;
