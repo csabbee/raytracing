@@ -1,6 +1,7 @@
 /// <reference path="../raytrace.d.ts"/>
 module rt {
     export class Vector implements rt.IVector {
+
         x:number;
         y:number;
         z:number;
@@ -26,6 +27,10 @@ module rt {
 
         vectorialMultiply(vector:rt.IVector):rt.IVector {
             return new Vector(this.y * vector.z - this.z * vector.y, this.z * vector.x - this.x * vector.z, this.x * vector.y - this.y * vector.x);
+        }
+
+        multiplyVector(vector:rt.IVector):number {
+            return  this.x * vector.x + this.y * vector.y + this.z * vector.z;
         }
 
         addVector(vector:rt.IVector):rt.IVector {
