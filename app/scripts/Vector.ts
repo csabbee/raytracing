@@ -10,6 +10,7 @@ module rt {
             this.x = x;
             this.y = y;
             this.z = z;
+            this.w = 0;
         }
 
         normalize():void {
@@ -24,35 +25,36 @@ module rt {
         }
 
         vectorialMultiply(vector:rt.IVector):rt.IVector {
-            return undefined;
+            return new Vector(this.y * vector.z - this.z * vector.y, this.z * vector.x - this.x * vector.z, this.x * vector.y - this.y * vector.x);
         }
 
         addVector(vector:rt.IVector):rt.IVector {
-            return undefined;
+            var x = this.x + vector.x;
+            var y = this.y + vector.y;
+            var z = this.z + vector.z;
+            return new Vector(x,y,z);
         }
 
         substractVector(vector:rt.IVector):rt.IVector {
-            return undefined;
+            var x = this.x - vector.x;
+            var y = this.y - vector.y;
+            var z = this.z - vector.z;
+            return new Vector(x,y,z);
         }
 
-        divideVector(vector:rt.IVector):rt.IVector {
-            return undefined;
-        }
 
         multiplyVectorByNumber(f:number):rt.IVector {
-            return undefined;
-        }
-
-        addVectorByNumber(f:number):rt.IVector {
-            return undefined;
-        }
-
-        substractVectorByNumber(f:number):rt.IVector {
-            return undefined;
+            var x = this.x * f;
+            var y = this.y * f;
+            var z = this.z * f;
+            return new Vector(x,y,z);
         }
 
         divideVectorByNumber(f:number):rt.IVector {
-            return undefined;
+            var x = this.x/f;
+            var y = this.y/f;
+            var z = this.z/f;
+            return new Vector(x,y,z);
         }
 
     }
