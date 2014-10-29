@@ -5,6 +5,7 @@
 var gulp = require('gulp');
 var ts = require('gulp-typescript');
 var eventStream = require('event-stream');
+var clean = require('gulp-clean');
 
 var path = {
     typescripts: './app/scripts/**/*.ts',
@@ -15,6 +16,11 @@ var path = {
 var tsProject = ts.createProject({
     declarationFiles: true,
     noExternalResolve: false
+});
+
+gulp.task('clean', function () {
+    return gulp.src([path.dist+'/**/*.js', path.dist+'/**/*.ts'], {read: false})
+        .pipe(clean());
 });
 
 gulp.task('typescript', function () {
@@ -30,5 +36,5 @@ gulp.task('typescript', function () {
 });
 
 gulp.task('watch', function () {
-    gulp.watch(path.typescripts, ['typescript']);
+    gulp.watch(path.typescripts, ['clean','typescript']);
 });
