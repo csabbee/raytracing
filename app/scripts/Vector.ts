@@ -1,6 +1,7 @@
 /// <reference path="../raytrace.d.ts"/>
 module rt {
     export class Vector implements rt.IVector {
+        
 
         x:number;
         y:number;
@@ -14,6 +15,12 @@ module rt {
             this.w = 0;
         }
 
+        set(v:rt.IVector):void {
+            this.x = v.x;
+            this.y = v.y;
+            this.z = v.z;
+        }
+        
         normalize():void {
             var length = this.length();
             this.x /= length;
