@@ -8,6 +8,7 @@ declare module rt{
 
         normalize(): void;
         length(): number;
+        set(v: IVector): void;
 
         vectorialMultiply(vector: IVector): IVector;
         addVector(vector: IVector): IVector;
