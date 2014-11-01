@@ -6,6 +6,7 @@ var gulp = require('gulp');
 var ts = require('gulp-typescript');
 var eventStream = require('event-stream');
 var clean = require('gulp-clean');
+var karma = require('karma').server;
 
 var path = {
     typescripts: './app/scripts/**/*.ts',
@@ -16,6 +17,12 @@ var path = {
 var tsProject = ts.createProject({
     declarationFiles: true,
     noExternalResolve: false
+});
+
+gulp.task('test', function (done){
+    karma.start({
+        configFile: __dirname+'/karma.conf.js'
+    }, done)
 });
 
 gulp.task('clean', function () {
