@@ -19,6 +19,8 @@ module rt {
         }
 
         reflectionDir(R:rt.IVector, N:rt.IVector, V:rt.IVector):void {
+            var temp = V.substractVector(N.vectorialMultiply(N.vectorialMultiply(V).multiplyVectorByNumber(2)));
+            R.set(temp);
         }
 
         makeF0():void {
